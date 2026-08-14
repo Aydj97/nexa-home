@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .outer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .inner-container {
+    max-width: 80%;
+    margin: 0 auto;
+    
+  }
+}
+
+/* Target the inner Swiper's navigation buttons */
+.inner-swiper .swiper-button-next,
+.inner-swiper .swiper-button-prev {
+  position: absolute;
+  top: 20%;
+  transform: translateY(0%);
+  /* Optional: Adjust size and background */
+  width: 25px;
+  height: 25px;
+  background: #c99a4d;
+  border-radius: 50%;
+  color: #111020;
+}
+
+/* Position them horizontally */
+.inner-swiper .swiper-button-next {
+  right: 10px;
+}
+
+.inner-swiper .swiper-button-prev {
+  left: 10px;
+}
+
+/* Optional: Hover effect */
+.inner-swiper .swiper-button-next:hover,
+.inner-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Hide default arrow icons if needed and use custom ones */
+.inner-swiper .swiper-button-next::after,
+.inner-swiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 700;
+}

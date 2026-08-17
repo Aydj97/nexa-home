@@ -201,7 +201,9 @@ const Header = () => {
                   </motion.li>
                 ))}
 
-                <motion.button
+                <NavLink to='/getstarted'>
+
+                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
@@ -211,6 +213,10 @@ const Header = () => {
                 >
                   Get Started
                 </motion.button>
+
+                </NavLink>
+
+               
               </ul>
 
               {/* Decorative elements */}

@@ -197,6 +197,8 @@ const Mainheader = () => {
                   </motion.li>
                 ))}
 
+                <NavLink to='/dashboad'>
+
                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -205,8 +207,12 @@ const Mainheader = () => {
                   whileTap={{ scale: 0.95 }}
                   className="w-full bg-linear-to-r from-[#c29345] to-[#e8b86d] text-[#f8f2ff] text-lg lg:text-xl font-bold py-4  shadow-lg hover:shadow-[#c29345]/30 transition-all duration-300 mt-4 rounded-[50%]"
                 >
-                  <CgProfile />
+                  Dashborad
                 </motion.button>
+
+                </NavLink>
+
+                
               </ul>
 
               {/* Decorative elements */}

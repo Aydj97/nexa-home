@@ -1,21 +1,24 @@
 // import React from 'react'
 
 
-// import Trecking from "./Trecking"
-// import FeaturedSale from "./FeaturedSale"
+
+import FeaturedSale from "./FeaturedSale"
 import Hero from "./Hero"
-// import NexaShortlets from "./NexaShortlets"
-// import OurService from "./OurService"
+import NexaShortlets from "./NexaShortlets"
+import OurService from "./OurService"
+import Trecking from "./Trecking"
 
 const HomeComp = () => {
   return (
 
     <>
     <Hero />
-    {/* <NexaShortlets/> */}
-    {/* <FeaturedSale/> */}
-    {/* <OurService />
-    */}
+    <NexaShortlets/>
+    
+    <FeaturedSale/>
+    <OurService />
+    <Trecking/>
+   
    
     </>
   

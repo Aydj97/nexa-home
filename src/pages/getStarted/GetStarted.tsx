@@ -38,6 +38,7 @@ import {
 import one from "../../assets/one-hand.png";
 
 const GetStarted = () => {
+  
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [password, setPassword] = useState('');
@@ -554,7 +555,7 @@ const GetStarted = () => {
                 {/* Sign In Link */}
                 <div className="text-center text-sm text-gray-500">
                   Already have an account?{' '}
-                  <a href="/login" className="text-[#c29345] font-semibold hover:underline hover:text-[#a87d3a] transition-colors">
+                  <a href="/dashboad" className="text-[#c29345] font-semibold hover:underline hover:text-[#a87d3a] transition-colors">
                     Sign In
                   </a>
                 </div>

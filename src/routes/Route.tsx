@@ -14,6 +14,8 @@ import LoginLayout from "../layout/LoginLayout";
 import LogIn from "../pages/getStarted/LogIn";
 import DashboadLayout from "../layout/DashboadLayout";
 import Dashboad from "../pages/getStarted/Dashboad";
+import MainPageLayout from "../layout/MainPageLayout";
+import MainPageComp from "../pages/mainHome/MainPageComp";
 
 export const element = createBrowserRouter([
   {
@@ -91,6 +93,17 @@ export const element = createBrowserRouter([
       {
         index: true,
         element: <Dashboad/>,
+      },
+    ],
+  },
+
+  {
+    path: "/mainpage",
+    element: <MainPageLayout/>,
+    children: [
+      {
+        index: true,
+        element: <MainPageComp/>,
       },
     ],
   },

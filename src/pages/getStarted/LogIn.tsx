@@ -60,8 +60,12 @@ const LogIn = () => {
     await new Promise(resolve => setTimeout(resolve, 1500));
     console.log('Login:', { email, password, rememberMe });
     setIsLoading(false);
-    navigate('/dashboard');
+    navigate('/ dashboard');
   };
+
+  function handleNavigation(arg0: string): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <div className="outer-container min-h-screen bg-linear-to-b from-slate-50 via-white to-slate-50">
@@ -266,26 +270,39 @@ const LogIn = () => {
                   </a>
                 </div>
 
-                {/* Login Button */}
+                <NavLink to='/mainpage'>
+
+                   {/* Login Button */}
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={isLoading}
                   className="w-full bg-linear-to-r from-[#c29345] to-[#e8b86d] text-white py-3 sm:py-3.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed group"
+                 
                 >
                   {isLoading ? (
                     <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+
+                     onClick={() => handleNavigation('/mainpage')}
+
+                    
+                      <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"  ></div>
                       Signing In...
                     </>
                   ) : (
                     <>
+
+                    
                       Sign In
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
                 </motion.button>
+
+                </NavLink>
+
+               
 
                 {/* Divider */}
                 <div className="relative">

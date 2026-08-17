@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import logo from "../../assets/log-nexa.png";
 import { MdClose } from "react-icons/md";
-import { CgMenuGridR } from "react-icons/cg";
+import { CgMenuGridR, CgProfile } from "react-icons/cg";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Mainheader = () => {
   const [dropdown, setDropdown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("Home, contacts ");
@@ -39,8 +39,7 @@ const Header = () => {
     { name: "Properties", path: "/properties" },
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
-    { name: "Login", path: "/login" },
-
+    { name: "logout", path: "/" },
   ];
 
   const handleLinkClick = (linkName: string) => {
@@ -114,22 +113,19 @@ const Header = () => {
               ))}
             </ul>
 
-            <NavLink to="/getstarted">
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="relative overflow-hidden bg-linear-to-r from-[#c29345] to-[#e8b86d] text-[#f8f2ff] text-sm lg:text-base font-bold px-6 py-2.5 lg:px-8 lg:py-3 rounded-lg shadow-lg hover:shadow-[#c29345]/30 transition-all duration-300"
-            >
-              <span className="relative z-10">Get Started</span>
-              <div className="absolute inset-0 bg-linear-to-r from-[#e8b86d] to-[#c29345] opacity-0 hover:opacity-100 transition-opacity duration-300" />
-            </motion.button>
-            
-
-            
+            <NavLink to="/dashboad">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative overflow-hidden bg-linear-to-r from-[#c29345] to-[#e8b86d] text-[#f8f2ff] text-sm lg:text-base font-bold px-3 py-2.5 lg:px-8 lg:py-3 rounded-[50%] shadow-lg hover:shadow-[#c29345]/30 transition-all duration-300"
+              >
+                <span className=" flex flex-col gap-1 justify-center items-center">
+                  <CgProfile />
+                 
+                </span>
+                <div className="absolute inset-0 bg-linear-to-r from-[#e8b86d] to-[#c29345] opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </motion.button>
             </NavLink>
-
-            
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -207,9 +203,9 @@ const Header = () => {
                   transition={{ delay: 0.6 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full bg-linear-to-r from-[#c29345] to-[#e8b86d] text-[#f8f2ff] text-lg lg:text-xl font-bold py-4 rounded-lg shadow-lg hover:shadow-[#c29345]/30 transition-all duration-300 mt-4"
+                  className="w-full bg-linear-to-r from-[#c29345] to-[#e8b86d] text-[#f8f2ff] text-lg lg:text-xl font-bold py-4  shadow-lg hover:shadow-[#c29345]/30 transition-all duration-300 mt-4 rounded-[50%]"
                 >
-                  Get Started
+                  <CgProfile />
                 </motion.button>
               </ul>
 
@@ -233,4 +229,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Mainheader;

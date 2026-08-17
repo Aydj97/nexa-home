@@ -63,10 +63,7 @@ const LogIn = () => {
     navigate('/ dashboard');
   };
 
-  function handleNavigation(arg0: string): void {
-    throw new Error('Function not implemented.');
-  }
-
+  
   return (
     <div className="outer-container min-h-screen bg-linear-to-b from-slate-50 via-white to-slate-50">
       <div className="inner-container px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
@@ -284,7 +281,6 @@ const LogIn = () => {
                   {isLoading ? (
                     <>
 
-                     onClick={() => handleNavigation('/mainpage')}
 
                     
                       <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"  ></div>

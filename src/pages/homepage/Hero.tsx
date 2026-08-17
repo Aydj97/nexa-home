@@ -64,7 +64,7 @@ const Hero = () => {
       </Swiper>
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex items-center justify-center w-full h-full  lg:-top-143 -top-167 ">
+      <div className="relative z-10 flex items-center justify-center w-full main-h-full  lg:-top-113 -top-143 ">
         <div className="inner-container px-4 md:px-6 lg:px-8 ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

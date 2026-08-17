@@ -23,7 +23,6 @@ import {
   HiOutlineChatBubbleLeftRight,
 } from 'react-icons/hi2';
 import { NavLink } from "react-router-dom";
-import { div } from 'framer-motion/client';
 
 const MainService = () => {
   const ref = useRef(null);
